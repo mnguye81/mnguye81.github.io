@@ -1,0 +1,93 @@
+a:link {
+	color:black;
+}
+
+a:visited {}
+
+a:hover {
+}
+a:active {}
+
+
+
+#pages {
+	font-family: Trebuchet MS;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#navlinks {
+	font-family:Trebuchet MS;
+	font-size:  30x;
+}
+
+h1 {
+	font-family:Trebuchet MS;
+	font-size:50px;
+}
+
+h2 {
+	font-family:Trebuchet MS;
+}
+
+p {
+	font-family:Trebuchet MS;
+}
+
+.hero {
+	position:relative;
+	width:100vw;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: url(tiramisu_left_kitchen.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	filter: brightness(60%);
+}
+
+.hero-content {
+	position: relative;
+	font-family: Trebuchet MS;
+	color: white;
+	text-align: center;
+	margin: 0.625rem;
+}
+
+.hero-title {
+	font-family: Trebuchet MS;
+	font-size: 3rem;
+	font-weight: 900;
+	margin-bottom: 0;
+}
+
+.hero-subtitle {
+	font-family: Trebuchet MS;
+	font-size: 2rem;
+	font-weight: 900;
+	margin-top: 1rem;
+}
+
+.hero-button {
+	background-color: #F1E8DE;
+	color: black;
+	border: 1px solid #F1E8DE;
+	border-radius: 25px;
+	margin-top: 5rem;
+	padding: 0.9375rem 1.875rem;
+	font-family: Trebuchet MS;
+	font-size: 1.125rem;
+	font-weight: 200;
+	cursor: pointer;
+}
