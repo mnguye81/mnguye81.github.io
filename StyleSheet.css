@@ -1,26 +1,54 @@
 a:link {
-	color:black;
+	color: white;
+	text-decoration: none;
 }
 
 a:visited {}
 
 a:hover {
+	text-decoration:underline;
+	color:white;
 }
+
 a:active {}
 
-
-
-#pages {
-	font-family: Trebuchet MS;
-	font-size: 30px;
-	font-weight: bold;
+* {
+	margin:0;
+	box-sizing:border-box;
 }
 
-#navlinks {
+body {
+	height:100vh;
+	width:100vw;
+	padding-top:50px;
+	background-color:snow;
+}
+
+nav {
+	overflow: hidden;
+	background-color: #27201B;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-color:white;
+}
+
+nav a {
+	float:right;
+	display: block;
+	color: white;
+	padding: 14px 16px;
+	font-size: 20px;
+	font-weight:bold;
 	font-family:Trebuchet MS;
-	font-size:  30x;
+	text-decoration:underline;
 }
 
+nav a:hover {
+	color: white;
+	text-decoration:underline;
+}
+	
 h1 {
 	font-family:Trebuchet MS;
 	font-size:50px;
@@ -28,17 +56,27 @@ h1 {
 
 h2 {
 	font-family:Trebuchet MS;
+	font-size: 35px;
+}
+
+h3 {
+	font-family:Trebuchet MS;
+	font-size: 35px;
+	color: saddlebrown;
+	margin:30px;
 }
 
 p {
 	font-family:Trebuchet MS;
+	line-height:20px;
+	margin:30px;
 }
 
 .hero {
 	position:relative;
 	width:100vw;
 	height:100vh;
-	display: flex;
+	display:flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -91,6 +129,46 @@ p {
 	font-weight: 200;
 	cursor: pointer;
 }
-ul {
+
+.breadcrumb {
 	font-family: Trebuchet MS;
+	padding: 10px 16px;
+	list-style: none;
+	background-color: linen;
+	line-height: 1.6;
+}         
+
+.breadcrumb-page a:hover {
+	color: black;
+	text-decoration: underline;
 }
+
+.breadcrumb-page {
+	display: inline;
+	font-size: 18px;
+}
+
+.breadcrumb li {
+	display: inline;
+	font-size: 18px;
+	height:865px;
+}	
+
+.breadcrumb li a {
+	color:black;
+}
+
+.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/";
+}
+
+.breadcrumb-indicator {
+	color: #5F3920;
+	font-weight:bold;
+}
+
+ul {
+	font-family:Trebuchet MS;
+} 
