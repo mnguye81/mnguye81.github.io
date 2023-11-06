@@ -156,8 +156,12 @@ p {
 }
 
 /* breadcrumb container */
-.breadcrumb {
-	width: 100%;
+ol.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  
+  	width: 100%;
 	font-family: Arial;
 	padding: 10px 16px;
 	list-style: none;
@@ -167,12 +171,9 @@ p {
 	overflow: hidden;
 	z-index:1000;
 	display: block;
-  margin-left: -15px;
-  margin-right: -15px;
-
 }   
       
-.breadcrumb-page a:hover {
+ol.breadcrumb-page a:hover {
 	color: black;
 	text-decoration: underline;
 }
@@ -180,32 +181,30 @@ p {
 .breadcrumb-page {
 	display: inline;
 	font-size: 18px;
-
+	
 }
 
-.breadcrumb li {
+ol.breadcrumb li {
 	display: inline;
 	font-size: 18px;
 	height:865px;
 	list-style: none;
-
 }	
 
-.breadcrumb li a {
+ol.breadcrumb li a {
 	color:black;
-
+	text-align: center;
 }
 
-.breadcrumb ol {
+ol.breadcrumb ol {
 	margin: 0;
-	padding: 0;
-	text-overflow: ellipsis;
+	padding: 0;	
 }
 	
-.breadcrumb li+li:before {
+ol.breadcrumb li+li:before {
 	padding: 8px;
 	color: black;
-	content: "/";
+	content: "/\00a0";
 }
 
 .breadcrumb-indicator {
@@ -216,24 +215,22 @@ p {
 
 ul, ol {
 	font-family:Arial;
-	margin-left:15px;
-	margin-right:30px;
 } 
 
-/* unordered list line spacing */
-ul li {
-	margin-bottom:5px;
-}
-
-ol li {
+ol.page-ols, ul.page-links, ul.page-uls {
+	margin-left:15px;
+	margin-right:30px;
 	font-family: Arial;
 	margin-bottom:5px;
 }
 
-ol {
-	margin-left:15px;
-	margin-right:30px;
-	padding:0;
+/* unordered list line spacing */
+ul li, ol li {
+	margin-bottom:5px;
+}
+
+.before-list {
+	margin-left:30px;
 }
 
 .page-link a:hover {
