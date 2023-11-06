@@ -1,75 +1,98 @@
-a:link {
-	color: white;
-	text-decoration: none;
-}
+/* links are white */
+	a:link {
+		color: white;
+		text-decoration: none;
+	}
 
 a:visited {}
 
-a:hover {
-	text-decoration:underline;
-	color:white;
-}
+/* hovered links are underlined and white */
+	a:hover, nav a:hover {
+		text-decoration:underline;
+		color:white;
+	}
 
 a:active {}
 
-* {
-	margin:0;
-	box-sizing:border-box;
+/* entire content doesn't margins; border box gives padding */
+	* {
+		margin:0;
+		box-sizing:border-box;
+	}
+
+/* content's body */
+	body {
+		height:100vh;
+		width:100vw;
+		padding-top:50px;
+		background-color:white;
+		margin: 0px;
+	}
+
+main {
+	padding-top:70px;
+	padding-bottom:50px;
 }
 
-body {
-	height:100vh;
-	width:100vw;
-	padding-top:50px;
-	background-color:snow;
-}
+/* consistent main navigation menu */
+	nav { 
+		overflow: hidden;
+		background-color: #27201B;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		font-color:white;
+		z-index:1000;
+	}
 
-nav {
-	overflow: hidden;
-	background-color: #27201B;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	font-color:white;
-}
+/* main nav menu links */
+	nav a {
+		float:right;
+		display: block;
+		color: white;
+		padding: 14px 16px;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: Arial;
+		text-decoration:underline;
+	}
 
-nav a {
-	float:right;
-	display: block;
-	color: white;
-	padding: 14px 16px;
-	font-size: 20px;
-	font-weight:bold;
-	font-family:Trebuchet MS;
-	text-decoration:underline;
-}
+/* heading 1 style for index page */	
+	h1 {
+		font-family:Arial;
+		font-size:50px;
+	}
 
-nav a:hover {
-	color: white;
-	text-decoration:underline;
-}
-	
-h1 {
-	font-family:Trebuchet MS;
-	font-size:50px;
-}
-
-h2 {
-	font-family:Trebuchet MS;
+/* heading 2 style for index page */
+	h2 {
+	font-family:Arial;
 	font-size: 35px;
-}
+	}
 
-h3 {
-	font-family:Trebuchet MS;
-	font-size: 35px;
-	color: saddlebrown;
-	margin:30px;
-}
+/* heading 3 is the heading for each page name in breadcrumb */
+	h3 {
+		font-family:Arial;
+		font-size: 35px;
+		color: saddlebrown;
+		margin:30px;
+	}
+
+/* h4 is subheading for each page */
+	h4 {
+		font-family:Arial;
+		font-size: 30px;
+		color: black;
+		margin:30px;
+	}
 
 p {
-	font-family:Trebuchet MS;
+	font-family:Arial;
 	line-height:20px;
 	margin:30px;
+}
+
+.before-list {
+	margin-bottom:10px;
 }
 
 .hero {
@@ -81,42 +104,44 @@ p {
 	align-items: center;
 }
 
-.hero::before {
-	content: "";
-	position: absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	background: url(tiramisu_left_kitchen.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	filter: brightness(60%);
-}
+/* index hero background image */
+	.hero::before {
+		content: "";
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background: url(tiramisu_left_kitchen.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		filter: brightness(60%);
+	}
 
 .hero-content {
-	position: relative;
-	font-family: Trebuchet MS;
+	position: absolute;
+	font-family: Arial;
 	color: white;
 	text-align: center;
 	margin: 0.625rem;
 }
 
 .hero-title {
-	font-family: Trebuchet MS;
+	font-family: Arial;
 	font-size: 3rem;
 	font-weight: 900;
 	margin-bottom: 0;
 }
 
 .hero-subtitle {
-	font-family: Trebuchet MS;
+	font-family: Arial;
 	font-size: 2rem;
 	font-weight: 900;
 	margin-top: 1rem;
 }
 
+/* get started button */
 .hero-button {
 	background-color: #F1E8DE;
 	color: black;
@@ -124,20 +149,29 @@ p {
 	border-radius: 25px;
 	margin-top: 5rem;
 	padding: 0.9375rem 1.875rem;
-	font-family: Trebuchet MS;
+	font-family: Arial;
 	font-size: 1.125rem;
 	font-weight: 200;
 	cursor: pointer;
 }
 
+/* breadcrumb container */
 .breadcrumb {
-	font-family: Trebuchet MS;
+	width: 100%;
+	font-family: Arial;
 	padding: 10px 16px;
 	list-style: none;
 	background-color: linen;
 	line-height: 1.6;
-}         
+	position: fixed;
+	overflow: hidden;
+	z-index:1000;
+	display: block;
+  margin-left: -15px;
+  margin-right: -15px;
 
+}   
+      
 .breadcrumb-page a:hover {
 	color: black;
 	text-decoration: underline;
@@ -146,18 +180,28 @@ p {
 .breadcrumb-page {
 	display: inline;
 	font-size: 18px;
+
 }
 
 .breadcrumb li {
 	display: inline;
 	font-size: 18px;
 	height:865px;
+	list-style: none;
+
 }	
 
 .breadcrumb li a {
 	color:black;
+
 }
 
+.breadcrumb ol {
+	margin: 0;
+	padding: 0;
+	text-overflow: ellipsis;
+}
+	
 .breadcrumb li+li:before {
 	padding: 8px;
 	color: black;
@@ -169,6 +213,121 @@ p {
 	font-weight:bold;
 }
 
-ul {
-	font-family:Trebuchet MS;
+
+ul, ol {
+	font-family:Arial;
+	margin-left:15px;
+	margin-right:30px;
 } 
+
+/* unordered list line spacing */
+ul li {
+	margin-bottom:5px;
+}
+
+ol li {
+	font-family: Arial;
+	margin-bottom:5px;
+}
+
+ol {
+	margin-left:15px;
+	margin-right:30px;
+	padding:0;
+}
+
+.page-link a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.page-links li a {
+	color:dodgerblue;
+}
+
+/* links in ingredients */
+.page-links li {
+	margin-bottom:5px;
+}
+
+/* contact form text */
+	input[type=text], select, textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+ 		resize: vertical;
+		font-family:Arial;
+	}
+
+/* submit button */
+	input[type=submit] {
+		background-color: #27201B;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+/* hover on submit button */
+	input[type=submit]:hover {}
+
+/* container for contact form */
+	.container {
+		background-color: seashell;
+		padding: 30px;
+	}
+/* labels in forms */	
+label {
+	font-family:Arial;
+}
+
+/* get started image */	
+	.tiramisu-cafe-image {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		padding:30px;
+		padding-top:0px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		float:left;
+	}
+
+.tiramisu-ingredients-image {
+	object-fit:contain;
+	padding-left:30px;
+	padding-right:30px;
+  width: 100%;
+  height: auto;
+
+}
+
+.standmixer-image {
+	object-fit:contain;
+	padding-left:30px;
+	padding-right:30px;
+  width: 100%;
+  height: auto;
+}
+
+.preparation-image {
+	object-fit:contain;
+	padding-left:30px;
+	padding-right:30px;
+  width: 100%;
+  height: auto;
+}
+
+.recipe-image {
+	object-fit:contain;
+	padding-left:30px;
+	padding-right:30px;
+  width: 100%;
+  height: auto;
+}
+
