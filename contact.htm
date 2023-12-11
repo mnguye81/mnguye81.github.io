@@ -10,31 +10,33 @@
 		<header>
 			<nav>
 				<a href="contact.htm">Contact</a> 
-				<a href="about.htm">About</a> 
 				<a href="index.htm">Home</a>
+				<img src="logo.png" alt="Logo image"> 
 			</nav>
 		</header>
 
 		<h3>Contact me</h3>
 
 		<div class="container">	
-			<form id="contactform" action="contacted.php" method="get">
+			<form id="contactform" method="POST" action= "sendmail.php">
 				<label for="fname">First Name</label>
-				<input type="text" id="fname" name="firstname" placeholder="Enter your first name...">
+				<input type="text" id="fname" name="firstname" placeholder="Enter your first name..." required>
 
 				<label for="lname">Last Name</label>
-				<input type="text" id="lname" name="lastname" placeholder="Enter your last name...">
+				<input type="text" id="lname" name="lastname" placeholder="Enter your last name..." required>
 
 				<label for="email">Email</label>
-				<input type="text" name="email" placeholder="Enter your email...">
+				<input type="text" name="email" placeholder="Enter your email..." required>
 		
 				<label for="subject">Message</label>
 				<textarea id="subject" name="subject" placeholder="Write your message..."></textarea>
-				
-
-				<input type="submit" value="Submit">
-			</form>
+	
+				<button type="submit"> Submit </button>
 		</div>
+
+		<footer>
+			<p>&copy; 2023 Mandalynn Nguyen | <a href="mailto: mandalynn3579@gmail.com">mandalynn3579@gmail.com</a></p>
+		</footer>
 
 	</body>
 </html>
